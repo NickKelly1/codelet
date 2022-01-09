@@ -1,0 +1,64 @@
+{
+  "name": "---PROJECT-NAME---",
+  "type": "module",
+  "main": "dist/main.js",
+  "sideEffects": false,
+  "version": "0.0.1",
+  "description": "---PROJECT-DESCRIPTION---",
+  "author": "Nick Kelly",
+  "homepage": "---GITHUB-URL---",
+  "readme": "---GITHUB-URL---#readme",
+  "license": "Mozilla Public License Version 2.0",
+  "private": false,
+  "repository": {
+    "type": "git",
+    "url": "---GITHUB-URL---"
+  },
+  "bugs": {
+    "url": "---GITHUB-URL---/issues"
+  },
+  "keywords": [
+    "TypeScript",
+    "JavaScript"
+  ],
+  "scripts": {
+    "start": "node --enable-source-maps dist/main.js",
+    "start:inspect": "node --inspect --enable-source-maps dist/main.js",
+    "start:inspect-brk": "node --inspect-brk --enable-source-maps dist/main.js",
+    "dev": "pnpm clean && nodemon --delay 2.5 --watch src --exec 'pnpm build && pnpm start'",
+    "dev:inspect": "pnpm clean && nodemon --delay 2.5 --watch src --exec 'pnpm build && pnpm start:inspect'",
+    "dev:inspect-brk": "pnpm clean && nodemon --delay 2.5 --watch src --exec 'pnpm build && pnpm start:inspect-brk'",
+    "build": "tsc -p config/tsconfig.build.json",
+    "build:watch": "tsc -p config/tsconfig.build.json --watch",
+    "build:clean": "pnpm run clean && pnpm run build",
+    "build:clean:watch": "pnpm run clean && pnpm run build:watch",
+    "clean": "rimraf dist .tsbuildinfo",
+    "test": "jest -c config/jest.config.ts",
+    "test:coverage": "jest -c config/jest.config.ts --coverage",
+    "test:watch": "jest -c config/jest.config.ts --watch",
+    "lint": "eslint . --ext '*/**/*.{js,jsx,ts,tsx}'",
+    "lint:fix": "eslint . --ext '*/**/*.{js,jsx,ts,tsx}' --fix"
+  },
+  "devDependencies": {
+    "@jest/types": "^27.4.2",
+    "@types/jest": "^27.4.0",
+    "@types/node": "^17.0.8",
+    "@typescript-eslint/eslint-plugin": "^5.9.0",
+    "@typescript-eslint/parser": "^5.9.0",
+    "eslint": "^8.6.0",
+    "jest": "^27.4.7",
+    "nodemon": "^2.0.15",
+    "rimraf": "^3.0.2",
+    "ts-jest": "^27.1.2",
+    "ts-node": "^10.4.0",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.5.4"
+  },
+  "dependencies": {
+    "@nkp/config": "0.0.18",
+    "chalk": "^5.0.0",
+    "dotenv": "^10.0.0",
+    "winston": "^3.3.3",
+    "winston-daily-rotate-file": "^4.5.5"
+  }
+}
