@@ -1,15 +1,5 @@
-# Template NodeJS
+# Codelets
 
-Batteries included template for NodeJS projects
+[![Known Vulnerabilities](https://snyk.io/test/github/nickkelly1/codelets/badge.svg)](https://snyk.io/test/github/nickkelly1/codelets)
 
-Features:
-- Logging
-- TypeScript
-- Jest
-- Rollup
-
-## ---PROJECT-NAME---
-
-![Known Vulnerabilities](https://snyk.io/test/github/---GITHUB-PROJECT---/badge.svg)
-
----PROJECT-DESCRIPTION---
+Self hosted code snippets

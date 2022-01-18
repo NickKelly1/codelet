@@ -1,0 +1,74 @@
+/* font-family: 'Anonymous Pro', monospace;
+font-family: 'Courier Prime', monospace;
+font-family: 'Poiret One', cursive;
+font-family: 'Raleway', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace; */
+
+:root {
+  --ff-fancy: 'Poiret One', cursive;
+  --ff-code: 'Courier Prime', monospace;
+  --ff-content: 'Raleway', sans-serif;
+
+  --saturation: 75%;
+  --brightness: 75%;
+
+  --bg-primary: hsl(200, 40%, 5%);
+  --bg-secondary: hsl(200, 40%, 10%);
+
+  --fg-primary: hsl(40, 66%, 85%);
+
+  --red: hsl(0, var(--saturation), var(--brightness));
+  --orange: hsl(30, var(--saturation), var(--brightness));
+  --yellow: hsl(60, var(--saturation), var(--brightness));
+  --lightgreen: hsl(90, var(--saturation), var(--brightness));
+  --green: hsl(120, var(--saturation), var(--brightness));
+  --aqua: hsl(150, var(--saturation), var(--brightness));
+  --cyan: hsl(180, var(--saturation), var(--brightness));
+  --blue: hsl(210, var(--saturation), var(--brightness));
+  --purple: hsl(240, var(--saturation), var(--brightness));
+  --move: hsl(270, var(--saturation), var(--brightness));
+  --pink: hsl(300, var(--saturation), var(--brightness));
+  --rose: hsl(330, var(--saturation), var(--brightness));
+
+  --spacing-0: 0px;
+  --spacing-1: 4px;
+  --spacing-2: 8px;
+  --spacing-3: 12px;
+  --spacing-4: 16px;
+  --spacing-5: 20px;
+  --spacing-6: 24px;
+  --spacing-7: 28px;
+  --spacing-8: 32px;
+}
+
+/*
+body {
+  background-color: var(--bg-primary);
+  color: var(--fg-primary);
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: var(--ff-fancy);
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+*/
+
+body::before {
+  display: block;
+  content: '';
+  height: 60px;
+}
+
+@media(min-width: 768px) {
+  .news-input {
+    width: 50%;
+  }
+}

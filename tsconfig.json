@@ -11,6 +11,7 @@
     "moduleTypes": {
       // https://github.com/facebook/jest/issues/11453#issuecomment-877653950
       "config/jest.config.ts": "cjs",
+      ".eslint.js": "cjs",
     },
 
     "compilerOptions": {
@@ -25,14 +26,14 @@
     "tsBuildInfoFile": ".tsbuildinfo",
     "target": "ES2020",
     "module": "ES2020",
-    "declaration": false,
+    "declaration": true,
     "declarationMap": false,
     "sourceMap": true,
     "outDir": "dist",
     "resolveJsonModule": true,
     "strict": true,
     "allowJs": true,
-    "checkJs": true,
+    // "checkJs": true,
     "noEmit": true,
     "noUnusedParameters": false,
     "noImplicitReturns": true,
@@ -44,6 +45,12 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "skipLibCheck": true,
-    "forceConsistentCasingInFileNames": true
+    "forceConsistentCasingInFileNames": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "typeRoots": [
+      "./node_modules/@types",
+      "./src/@types",
+    ]
   },
 }

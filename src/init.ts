@@ -1,6 +1,11 @@
-import { logger } from './logger.js';
+import { logger } from './logger/logger.service.js';
+import { kv } from '@nkp/kv';
+import chalk from 'chalk';
 
 let booted = false;
+
+kv.defaults.formatKey = (key) => chalk.green(key);
+
 
 /**
  * Prepare the application
@@ -21,22 +26,6 @@ export function init(): void {
     }
   );
 
-  process.on(
-    'uncaughtException',
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    function handleUnhandledRejection(err) {
-      // you may put telemetry stuff like Sentry here
-
-      // log and then exit
-
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      logger.error(err as any, () => {
-        // eslint-disable-next-line no-process-exit
-        process.exit(1);
-      });
-    }
-  );
-
-  logger.info('booted');
+  logger.info('initialised');
 }
 

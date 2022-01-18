@@ -12,6 +12,7 @@ const config = {
       files: ['*.js', '*.jsx',],
       'rules': {
         'indent': ['error', 2, ],
+        '@typescript-eslint/indent': ['off',],
         // doesn't work on .js files
         '@typescript-eslint/explicit-module-boundary-types': ['off',],
       },
@@ -62,10 +63,13 @@ const config = {
     '@typescript-eslint/no-this-alias': ['off',],
     '@typescript-eslint/no-empty-function': ['off',],
     'import/no-commonjs': ['off',],
-    '@typescript-eslint/indent': ['error', 2, ],
+    // '@typescript-eslint/indent': ['error', 2, ],
     '@typescript-eslint/no-explicit-any': ['off',],
     '@typescript-eslint/no-namespace': ['off',],
     '@typescript-eslint/no-empty-interface': ['off',],
+
+    // https://github.com/typescript-eslint/typescript-eslint/issues/1824
+    '@typescript-eslint/indent': ['off',], // decorator issue
   },
 };
 

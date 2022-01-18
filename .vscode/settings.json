@@ -1,8 +1,17 @@
 {
-  "window.title": "---PROJECT-NAME---",
+  "window.title": "codelets",
   "editor.codeActionsOnSave": {
     "source.fixAll.eslint": true
   },
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features",
+    "editor.formatOnSave": true,
+  },
+  "[handlebars]": {
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "vscode.html-language-features",
+  },
+  "html.format.wrapLineLength": 80,
   "eslint.validate": [
     "javascript",
     "typescript",
